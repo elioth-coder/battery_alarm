@@ -62,7 +62,7 @@ def repeat():
     beep(10)
   else: 
     hide()
-  threading.Timer(60.0, repeat).start()
+  threading.Timer(15.0, repeat).start()
 
 repeat()
 root.mainloop()
