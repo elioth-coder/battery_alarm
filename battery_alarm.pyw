@@ -11,12 +11,21 @@ def monitorBattery():
     battery = Battery()
     
     if(battery.critical()):
-        return showderror("Your battery's in critical level! [" + str(battery.percentage()) + "%]")
+        return showerror(
+            "Battery Level - [" + str(battery.percentage()) + "%]",
+            "Your battery's in critical level!"
+        )
 
     if(battery.needsCharging()):
-        return showwarning("Your battery needs charging! [" + str(battery.percentage()) + "%]")
+        return showwarning(
+            "Battery Level - [" + str(battery.percentage()) + "%]",
+            "Your battery needs charging!"
+        )
     
-    if(battery.enoughCharging()()):
-        return showinfo("Your battery's almost full! [" + str(battery.percentage()) + "%]")
-
+    if(battery.enoughCharging()):
+        return showinfo(
+            "Battery Level - [" + str(battery.percentage()) + "%]",
+            "Your battery's almost full!"
+        )
+        
 setInterval(monitorBattery,1)

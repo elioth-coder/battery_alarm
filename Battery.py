@@ -14,7 +14,7 @@ class Battery:
         return (not self.pluggedIn() and self.percentage() <= 20)
 
     def enoughCharging(self):
-        return (self.pluggedIn()() and self.percentage() >= 80)
+        return (self.pluggedIn() and self.percentage() >= 80)
     
     def critical(self): 
         return (not self.pluggedIn() and self.percentage() <= 10)
