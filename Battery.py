@@ -18,5 +18,3 @@ class Battery:
     
     def critical(self): 
         return (not self.pluggedIn() and self.percentage() <= 10)
-
-    
